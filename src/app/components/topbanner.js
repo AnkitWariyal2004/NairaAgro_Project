@@ -54,9 +54,7 @@ export default function ShufflingBanner() {
           Contact Us
         </button>
       </div>
-      <h1 className="relative text-2xl md:text-4xl text-white font-bold">
-            Welcome to Nyra Agro
-          </h1>
+      
       {/* Right Side - Animated Image */}
       <div className="w-full md:w-1/3 mt-8 md:mt-0 relative">
         <Image

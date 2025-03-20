@@ -39,10 +39,11 @@ export default function Categories() {
     <div className="bg-gray-50 py-12">
       {/* Header Section */}
       <div className="text-center mb-8">
+        
+        <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-4">
         <span className="text-green-700 font-semibold text-xl text-start">
           OUR CATEGORIES
         </span>
-        <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mt-2">
             Browse Our Categories
           </h1>

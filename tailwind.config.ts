@@ -18,6 +18,7 @@ export default {
       animation: {
         "fade-in": "fadeIn 1s ease-in-out",
         "slide-up": "slideUp 1s ease-in-out",
+        'spin-slow': 'spin 10s linear infinite',
       },
       keyframes: {
         fadeIn: {
