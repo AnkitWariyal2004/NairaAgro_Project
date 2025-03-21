@@ -38,9 +38,9 @@ export default function ShufflingBanner() {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center w-full mt-24 md:pl-8">
+    <div className="flex flex-col md:flex-row justify-between items-center w-full mt-24 md:pl-8">
       {/* Left Side - Text Content */}
-      <div className="text-center md:text-left max-w-lg space-y-4">
+      <div className="text-center md:text-left max-w-lg space-y-4 mb-8">
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold text-white animate-fade-in">
           {texts[currentText]}
         </h1>

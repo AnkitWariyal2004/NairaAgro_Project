@@ -14,7 +14,7 @@ export default function Home() {
     <div className="bg-slate-100 relative">
       <main>
         <section
-          className="p-2 h-[65vh] md:h-[50vh] lg:h-[45vh] bg-cover bg-center flex justify-center items-center relative"
+          className="p-2 h-[65vh] md:h-[40vh] lg:h-[55vh] bg-cover bg-center flex justify-center items-center relative"
           style={{ backgroundImage: "url('/img/bg/counter-bg.jpg')" }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30"></div>
