@@ -91,7 +91,8 @@ const SwappingCards = () => {
                 <h3 className="text-lg font-semibold text-gray-900">{card.title}</h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm mt-2 max-w-xs">{card.desc}</p>
+                {/* <p className="text-gray-600 text-sm mt-2 max-w-xs">{card.desc}</p> */}
+                <p className="text-gray-600 text-sm mt-2 max-w-xs hidden md:block">{card.desc}</p>
               </div>
             </div>
           ))}

@@ -1,4 +1,14 @@
 "use client";
+import { Akaya_Kanadaka } from "next/font/google";
+
+const akayaKanadaka = Akaya_Kanadaka({
+  weight: "400",              // Only 400 weight is available for this font
+  subsets: ["latin"],         // You can specify subsets for optimization
+  display: "swap",            // Optional: avoids layout shift
+  preload: true,              // Optional: preload for better performance
+  variable: "--font-akaya",   // Optional: create a CSS variable if you want to use it in Tailwind or CSS
+});
+
 import React, { useState, useEffect, useRef } from "react";
 import {
   FaMapMarkerAlt,
@@ -86,7 +96,7 @@ export default function Navbar() {
             {[FaInstagram, FaFacebookF, FaLinkedinIn].map((Icon, index) => (
               <Icon
                 key={index}
-                className="cursor-pointer transition-transform duration-300 hover:scale-125 hover:text-gray-700"
+                className="cursor-pointer transition-transform flex duration-300 hover:scale-125 hover:text-gray-700"
               />
             ))}
           </div>
@@ -100,16 +110,16 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center">
           <span className="text-white text-4xl font-semibold">nyra.</span>
-          <span className="text-[#FFD700] text-3xl font-mono">Agro</span>
+          <span className={`${akayaKanadaka.className} text-[#FFD700] text-4xl font-thin`}>Agro</span>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
-          {["Home", "About Us", "Services", "Contact Us"].map((item, index) => (
+          {["Home", "About Us", "Services","Gallary", "Contact Us"].map((item, index) => (
             <a
               key={index}
               href={`#${item.toLowerCase().replace(" ", "-")}`}
-              className="text-white text-lg font-medium hover:text-yellow-400 transition-colors"
+              className="text-white text-2xl font-medium hover:text-yellow-400 transition-colors px-4"
             >
               {item}
             </a>
@@ -125,51 +135,60 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* 🔹 Mobile Sidebar Menu */}
-      <div
-        ref={menuRef}
-        className={`fixed top-0 right-0 w-2/3 h-full bg-[#1a7b1a] text-white transform ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out shadow-lg z-[100]`}
-      >
-        <button
-          className="absolute top-4 right-4 text-3xl"
+
+
+
+
+
+
+{/* 🔹 Mobile Sidebar Menu */}
+<div
+  ref={menuRef}
+  className={`fixed top-0 right-0 w-2/3 h-full bg-[#145214] text-white transform ${
+    menuOpen ? "translate-x-0" : "translate-x-full"
+  } transition-transform duration-300 ease-in-out shadow-lg rounded-l-xl z-[100] flex flex-col`}
+>
+  {/* Close Button */}
+  <button
+    className="absolute top-4 right-4 text-2xl hover:text-yellow-400 transition-colors"
+    onClick={() => setMenuOpen(false)}
+  >
+    <FaTimes />
+  </button>
+
+  {/* Navigation Links Section */}
+  <div className="flex flex-col mt-20 p-4 text-sm">
+    {["Home", "About Us", "Services","Gallary", "Contact Us"].map((item, index) => (
+      <React.Fragment key={index}>
+        <a
+          href={`#${item.toLowerCase().replace(" ", "-")}`}
+          className="py-3 px-6 text-lg font-medium hover:text-yellow-400 transition-all duration-300 border-b border-gray-600"
           onClick={() => setMenuOpen(false)}
         >
-          <FaTimes />
-        </button>
-        <div className="flex flex-col mt-20 gap-6 p-6">
-          {/* Navigation Links Section */}
-          <div className="flex flex-col gap-6">
-            {["Home", "About Us", "Services", "Contact Us"].map((item, index) => (
-              <a
-                key={index}
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
-                className="text-xl font-medium hover:text-yellow-400 transition-colors"
-                onClick={() => setMenuOpen(false)}
-              >
-                {item}
-              </a>
-            ))}
-          </div>
+          {item}
+        </a>
+      </React.Fragment>
+    ))}
+  </div>
 
-          {/* Info Section */}
-          <div className="mt-60 gap-4">
-            <p className="flex gap-2 items-center">
-              <FaMapMarkerAlt /> Dineshpur, 263160
-            </p>
-            <p className="flex gap-2 items-center">
-              <FaEnvelope /> info@email.com
-            </p>
-            <p className="flex gap-2 items-center">
-              <FaPhone /> +91 9876556677
-            </p>
-            <p className="flex gap-2 items-center">
-              <FaClock /> Mon-Sat: 09.30 to 06.00
-            </p>
-          </div>
-        </div>
-      </div>
+  {/* Push Contact Info to Bottom */}
+  <div className="mt-auto p-6 border-t border-gray-600">
+    <p className="flex gap-2 items-center text-sm">
+      <FaMapMarkerAlt /> Dineshpur, 263160
+    </p>
+    <p className="flex gap-2 items-center text-sm">
+      <FaEnvelope /> info@email.com
+    </p>
+    <p className="flex gap-2 items-center text-sm">
+      <FaPhone /> +91 9876556677
+    </p>
+    <p className="flex gap-2 items-center text-sm">
+      <FaClock /> Mon-Sat: 09.30 to 06.00
+    </p>
+  </div>
+</div>
+
+
 
       {/* Push Content Below Navbar */}
       <div className="mt-[70px] md:mt-[80px]"></div>
