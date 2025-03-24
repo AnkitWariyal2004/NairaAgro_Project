@@ -57,7 +57,7 @@ export default function Banner1() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Side - Accordion */}
           <div className="w-full max-w-2xl mx-auto space-y-4">
-            <p className="text-lg text-gray-500">"We believe that true well-being comes from balance—caring for animals with kindness, supporting communities with integrity, and protecting our planet with responsibility. By embracing sustainable practices, we create a future where all life can flourish together."</p>
+            <p className="text-lg text-gray-500">We believe that true well-being comes from balance—caring for animals with kindness, supporting communities with integrity, and protecting our planet with responsibility. By embracing sustainable practices, we create a future where all life can flourish together.</p>
             {accordionData.map((item, index) => (
               <div key={index} className="border-b border-gray-300 pb-2">
                 {/* Accordion Header */}
