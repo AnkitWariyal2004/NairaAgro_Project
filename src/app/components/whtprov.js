@@ -65,7 +65,7 @@ export default function Whtprovd() {
             >
               <div className="flex items-center justify-between gap-3">
 {/* Circular Icon Wrapper */}
-<div className="flex-shrink-0 w-14 h-14 md:w-24 md:h-24 bg-yellow-400 border-4 border-yellow-100 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition duration-300">
+<div className="flex-shrink-0 w-14 h-14 md:w-20 md:h-20 bg-yellow-400 border-4 border-yellow-100 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition duration-300">
                 <img
                   src={feature.icon}
                   alt={feature.title}
