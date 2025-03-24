@@ -6,27 +6,27 @@ const accordionData = [
   {
     title: "Hydroponics Farming",
     content:
-      "Lorem ipsum dolor sit amet, porro quisquam lies est, qui dolorem ipsu. Lorem ipsum dolor sit a nui met, porro quisquam. qui dolorem ipsu quia dolor sit amet, consectetur, adipisci velit.",
+      "Hydroponics is a modern, soil-less farming technique that allows plants to grow in nutrient-rich water solutions. This innovative method uses up to 90% less water than traditional farming, making it highly sustainable and eco-friendly.",
   },
   {
     title: "Vertical Farming",
     content:
-      "This is the content for Vertical Farming. It will be revealed when the button is clicked.",
+      "Vertical farming is an innovative agricultural method where crops are grown in stacked layers, often within controlled indoor environments. This space-efficient technique maximizes food production while minimizing land use, making it ideal for urban areas.",
   },
   {
     title: "Organic Farming",
     content:
-      "This is the content for Organic Farming. It will be revealed when the button is clicked.",
+      "Organic farming is a sustainable agricultural practice that avoids synthetic fertilizers, pesticides, and genetically modified organisms (GMOs), focusing instead on natural methods to maintain soil fertility and crop health. By using compost, crop rotation, and biological pest control, this approach enhances biodiversity, conserves water, and improves soil quality",
   },
   {
     title: "Food Farming",
     content:
-      "This is the content for Food Farming. It will be revealed when the button is clicked.",
+      "Food farming is the backbone of human civilization, providing nutritious crops and livestock to sustain global populations. It encompasses various methods, including traditional, organic, hydroponic, and vertical farming, to ensure efficient and sustainable food production.",
   },
 ];
 
 export default function Banner1() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -57,7 +57,7 @@ export default function Banner1() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Side - Accordion */}
           <div className="w-full max-w-2xl mx-auto space-y-4">
-            <p className="text-lg text-gray-500">Lorem ipsum dolor sit amet, porro quisquam est, qui dolorem ipsu quia dolor sit amet, consectetur, adipisci velit. Lorem ipsum dolor a sit amet, porro quisquam est, qui dolorem ipsu quia dolor sit amet, consectetur, adipisci velit.</p>
+            <p className="text-lg text-gray-500">"We believe that true well-being comes from balance—caring for animals with kindness, supporting communities with integrity, and protecting our planet with responsibility. By embracing sustainable practices, we create a future where all life can flourish together."</p>
             {accordionData.map((item, index) => (
               <div key={index} className="border-b border-gray-300 pb-2">
                 {/* Accordion Header */}

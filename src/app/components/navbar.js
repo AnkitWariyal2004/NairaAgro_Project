@@ -74,7 +74,7 @@ export default function Navbar() {
           showTopBar ? "translate-y-0" : "-translate-y-full"
         } z-50`}
       >
-        <div className="flex justify-between items-center text-black text-sm px-4">
+        <div className="flex justify-between font-serif font-semibold items-center text-[#333333] text-sm px-4">
           {/* Contact Info */}
           <div className="hidden md:flex gap-4">
             <p className="flex gap-2 items-center">
