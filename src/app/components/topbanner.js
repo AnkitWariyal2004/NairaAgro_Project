@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import gsap from "gsap";
 import { Akaya_Kanadaka } from "next/font/google";
 
 const akayaKanadaka = Akaya_Kanadaka({
