@@ -39,7 +39,7 @@ export default function AboutUs() {
     story: {
       title: "Our Story",
       content:
-        "Green Valley Organic Farms was founded by [Founder’s Name], a third-generation farmer with a deep love for the land. What began as a passion project has blossomed into a thriving business that supports local families and promotes sustainable agriculture.",
+        " Naira Agro Farms was founded by [Founder’s Name], a third-generation farmer with a deep love for the land. What began as a passion project has blossomed into a thriving business that supports local families and promotes sustainable agriculture.",
     },
     team: {
       title: "Meet the Team",
@@ -66,14 +66,14 @@ export default function AboutUs() {
   };
 
   return (
-    <div className="overflow-hidden pt-6 bg-yellow-400">
+    <div className="overflow-hidden bg-yellow-400">
       {/* 🚜 Hero Section */}
       <div
         ref={heroRef}
-        className="relative h-screen flex flex-col items-center md:items-end justify-center bg-cover bg-center text-center px-6"
+        className="relative h-[45vh] m-1 rounded-lg flex flex-col items-center justify-center bg-cover bg-center text-center px-6"
         style={{ backgroundImage: "url('/img/bg/hero-bg-1-1.jpg')" }}
       >
-        <div className="backdrop-blur-sm bg-black/20 p-3 rounded-xl shadow-lg md:mr-16">
+        <div className="backdrop-blur-sm bg-black/20 p-3 rounded-xl shadow-lg">
         <motion.h1
         className="md:text-9xl text-6xl text-green-700 font-bold"
         initial={{ opacity: 0, y: -50, scale: 0.8 }}

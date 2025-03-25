@@ -24,13 +24,16 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <Banner1 />
+          <Banner3 />
+        </section>
+        <section id="about-us">
+          <AboutUs/>
         </section>
         <section>
           <Categories />
         </section>
         <section>
-          <Banner3 />
+          <Banner1 />
         </section>
         <section>
           <SwappingCards />
@@ -41,9 +44,7 @@ export default function Home() {
         <section id="gallary">
           <Gallary/>
         </section>
-        <section id="about-us">
-          <AboutUs/>
-        </section>
+        
         <section id="contact-us">
           <ContactUs/>
         </section>
