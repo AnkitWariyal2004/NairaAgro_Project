@@ -70,12 +70,12 @@ export default function AboutUs() {
       {/* 🚜 Hero Section */}
       <div
         ref={heroRef}
-        className="relative h-[45vh] m-1 rounded-lg flex flex-col items-center justify-center bg-cover bg-center text-center px-6"
+        className="relative h-[65vh] m-1 rounded-lg flex flex-col items-center justify-center bg-cover bg-center text-center px-6"
         style={{ backgroundImage: "url('/img/bg/hero-bg-1-1.jpg')" }}
       >
         <div className="backdrop-blur-sm bg-black/20 p-3 rounded-xl shadow-lg">
         <motion.h1
-        className="md:text-9xl text-6xl text-green-700 font-bold"
+        className="md:text-9xl text-5xl text-green-700 font-bold"
         initial={{ opacity: 0, y: -50, scale: 0.8 }}
         animate={
           heroInView
@@ -89,7 +89,7 @@ export default function AboutUs() {
 
       {/* Animated Subheading */}
       <motion.p
-        className="text-2xl md:text-3xl text-gray-50 mt-4 max-w-2xl mx-auto"
+        className="text-uixl md:text-3xl text-gray-50 mt-4 max-w-2xl mx-auto"
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         animate={
           heroInView
