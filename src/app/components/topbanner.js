@@ -50,10 +50,10 @@ export default function ShufflingBanner() {
 
   return (
     <section
-      className="mt-24 h-[75vh] md:h-[40vh] lg:h-[55vh] bg-cover bg-center flex justify-center items-end relative"
+      className="mt-24 h-[71vh] md:h-[40vh] lg:h-[55vh] bg-cover bg-center flex justify-center items-end relative"
       style={{ backgroundImage: "url('/img/bg/counter-bg.jpg')" }}
     >
-      <div className="flex flex-col md:flex-row justify-between items-top w-full mt-24 md:pl-32">
+      <div className="flex flex-col md:flex-row justify-between items-top w-full mt-24 md:pl-32 p-1">
         {/* Left Side - Text Content */}
         <div className="text-center md:text-left max-w-lg space-y-4">
           <h1

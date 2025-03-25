@@ -70,11 +70,11 @@ export default function Navbar() {
     <div className="relative z-50">
       {/* 🔹 Top Yellow Bar */}
       <div
-        className={`fixed top-0 left-0 w-full bg-[#FFD700] p-2 transition-transform duration-500 ${
+        className={`fixed top-0 left-0 w-full bg-white p-2 transition-transform duration-500 ${
           showTopBar ? "translate-y-0" : "-translate-y-full"
         } z-50`}
       >
-        <div className="flex justify-between font-serif font-semibold items-center text-[#333333] text-sm px-4">
+        <div className="flex justify-between font-serif font-semibold items-center text-[#333333] text-sm px-3">
           {/* Contact Info */}
           <div className="hidden md:flex gap-4">
             <p className="flex gap-2 items-center">
@@ -92,7 +92,7 @@ export default function Navbar() {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex gap-4 text-xl">
+          <div className="flex gap-2 md:gap-3 text-lg">
             {[FaInstagram, FaFacebookF, FaLinkedinIn].map((Icon, index) => (
               <Icon
                 key={index}
