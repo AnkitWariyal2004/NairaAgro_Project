@@ -24,17 +24,18 @@ export default function Home() {
           </div>
         </section>
         <section>
+        <section id="about-us">
+          <Banner1 />
+        </section>
           <Banner3 />
         </section>
-        <section id="about-us">
+        {/* <section>
           <AboutUs/>
-        </section>
+        </section> */}
         <section>
           <Categories />
         </section>
-        <section>
-          <Banner1 />
-        </section>
+        
         <section>
           <SwappingCards />
         </section>

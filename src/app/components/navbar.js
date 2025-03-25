@@ -1,5 +1,6 @@
 "use client";
 import { Akaya_Kanadaka } from "next/font/google";
+import Link from "next/link";
 
 const akayaKanadaka = Akaya_Kanadaka({
   weight: "400",              // Only 400 weight is available for this font
@@ -110,9 +111,12 @@ export default function Navbar() {
         className={`fixed ${navbarTop} left-0 w-full bg-[#1a7b1a] p-4 flex justify-between items-center z-50 transition-all duration-500`}
       >
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center cursor-default">
+          <Link href="#home">
           <span className="text-white text-4xl font-semibold">naira.</span>
           <span className={`${akayaKanadaka.className} text-[#FFD700] text-4xl`}>Agro</span>
+          </Link>
+          
         </div>
 
         {/* Desktop Navigation */}
