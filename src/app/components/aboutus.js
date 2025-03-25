@@ -25,7 +25,7 @@ export default function AboutUs() {
     mission: {
       title: "Our Mission",
       content:
-        "At Green Valley Organic Farms, our mission is simple: to grow food that’s good for you and good for the planet. We believe in the power of organic farming to nourish both people and the environment.",
+        "At Naira Agro Farms, our mission is simple: to grow food that’s good for you and good for the planet. We believe in the power of organic farming to nourish both people and the environment.",
     },
     whyChooseUs: {
       title: "Why Choose Us?",
@@ -98,7 +98,7 @@ export default function AboutUs() {
         }
         transition={{ duration: 1, delay: 0.3, type: "spring", bounce: 0.4 }}
       >
-        Committed to sustainable, organic farming for a healthier future.
+        Welcome to Naira Agro Farm - Your Gateway to Pure Organic Products
       </motion.p>
 
       {/* Animated Description */}
@@ -112,9 +112,8 @@ export default function AboutUs() {
         }
         transition={{ duration: 1, delay: 0.5, type: "spring", bounce: 0.3 }}
       >
-        Welcome to Green Valley Organic Farms, where nature and nourishment come
-        together! Nestled in the heart of Uttarakhand, our family-owned farm has
-        been cultivating the land with love and care since 1985.
+       At Naira Agro Farm, we are passionate about providing pure organic products directly to our customers. Our mission is to promote sustainable farming practices, support local communities, and bring healthy living to your doorstep.
+        
       </motion.p>
         </div>
         

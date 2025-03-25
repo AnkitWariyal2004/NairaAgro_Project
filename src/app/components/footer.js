@@ -104,22 +104,22 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 font-thin">
               <li>
-                <a href="#" className="text-gray-300 hover:text-yellow-400 duration-700 hover:scale-105">
+                <a href="#home" className="text-gray-300 hover:text-yellow-400 duration-700 hover:scale-105">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-yellow-400">
+                <a href="#about-us" className="text-gray-300 hover:text-yellow-400">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-yellow-400">
+                <a href="#services" className="text-gray-300 hover:text-yellow-400">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-yellow-400">
+                <a href="#contact-us" className="text-gray-300 hover:text-yellow-400">
                   Contact
                 </a>
               </li>
@@ -128,7 +128,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="footer-item">
-            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+            <h3 className="text-xl font-bold mb-4">Reach Our Farm</h3>
             <ul className="space-y-2 font-bold">
               <li className="flex items-center space-x-2">
                 <FaMapMarkerAlt className="text-yellow-400" />
@@ -172,7 +172,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="text-center mt-12 pt-8 border-t border-gray-700">
           <p className="text-gray-300">
-            &copy; {new Date().getFullYear()} Nyra Agro. All rights reserved.
+            &copy; {new Date().getFullYear()} Nyra Agro. All rights reserved. Made with ❤️ by Jay Sarkar & Parvati & Son's P&L Comapny.
           </p>
         </div>
       </div>

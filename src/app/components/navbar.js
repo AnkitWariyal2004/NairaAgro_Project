@@ -68,9 +68,9 @@ export default function Navbar() {
 
   return (
     <div className="relative z-50">
-      {/* 🔹 Top Yellow Bar */}
+      {/* 🔹 Top White Bar */}
       <div
-        className={`fixed top-0 left-0 w-full bg-white p-2 transition-transform duration-500 ${
+        className={`fixed top-0 left-0 w-full bg-white p-1 transition-transform duration-500 ${
           showTopBar ? "translate-y-0" : "-translate-y-full"
         } z-50`}
       >
@@ -92,8 +92,10 @@ export default function Navbar() {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex gap-2 md:gap-3 text-lg">
-            {[FaInstagram, FaFacebookF, FaLinkedinIn].map((Icon, index) => (
+          <div className="flex items-center gap-2 md:gap-3 text-lg">
+            <p className="flex items-center">follow us:</p>
+            {[ FaInstagram, FaFacebookF, FaLinkedinIn].map((Icon, index) => (
+        
               <Icon
                 key={index}
                 className="cursor-pointer transition-transform flex duration-300 hover:scale-125 hover:text-gray-700"
@@ -109,8 +111,8 @@ export default function Navbar() {
       >
         {/* Logo */}
         <div className="flex items-center">
-          <span className="text-white text-4xl font-semibold">nyra.</span>
-          <span className={`${akayaKanadaka.className} text-[#FFD700] text-4xl font-thin`}>Agro</span>
+          <span className="text-white text-4xl font-semibold">naira.</span>
+          <span className={`${akayaKanadaka.className} text-[#FFD700] text-4xl`}>Agro</span>
         </div>
 
         {/* Desktop Navigation */}

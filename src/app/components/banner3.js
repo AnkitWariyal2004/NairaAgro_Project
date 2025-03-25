@@ -27,7 +27,7 @@ const Banner3 = () => {
         {/* Left Content */}
         <div className="flex-1 space-y-6">
           <h3 className="text-green-700 text-lg font-semibold uppercase">
-            Welcome to NyraAgro
+            Welcome to Naira Agro
           </h3>
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
             Agriculture & Organic Product Farm
