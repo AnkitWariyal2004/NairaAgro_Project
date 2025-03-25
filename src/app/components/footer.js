@@ -172,7 +172,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="text-center mt-12 pt-8 border-t border-gray-700">
           <p className="text-gray-300">
-            &copy; {new Date().getFullYear()} Nyra Agro. All rights reserved. Made with ❤️ by Jay Sarkar & Parvati & Son's P&L Comapny.
+            &copy; {new Date().getFullYear()} Nyra Agro. All rights reserved. Made with ❤️ by Jay Sarkar & Parvati & Son&apos;s P&L Comapny.
           </p>
         </div>
       </div>
