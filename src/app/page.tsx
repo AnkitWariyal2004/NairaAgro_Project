@@ -8,7 +8,6 @@ import Categories from "@/app/components/categories";
 import Banner3 from "@/app/components/banner3";
 import SwappingCards from "@/app/components/banner4";
 import Whtprovd from "@/app/components/whtprov";
-import AboutUs from "@/app/components/aboutus";
 import Gallary from "@/app/components/gallary"
 
 export default function Home() {
