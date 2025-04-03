@@ -6,7 +6,7 @@ import ShufflingBanner from "@/app/components/topbanner";
 import Banner1 from "@/app/components/banner2";
 import Categories from "@/app/components/categories";
 import Banner3 from "@/app/components/banner3";
-import SwappingCards from "@/app/components/banner4";
+// import SwappingCards from "@/app/components/banner4";
 import Whtprovd from "@/app/components/whtprov";
 import Gallary from "@/app/components/gallary"
 
@@ -14,10 +14,7 @@ export default function Home() {
   return (
     <div className="bg-slate-100 relative">
       <main>
-        <section
-
-        >
-          
+        <section>
           <div className="mt-2" id="home">
             <ShufflingBanner />
           </div>
@@ -35,9 +32,9 @@ export default function Home() {
           <Categories />
         </section>
         
-        <section>
+        {/* <section>
           <SwappingCards />
-        </section>
+        </section> */}
         <section id="services">
           <Whtprovd />
         </section>

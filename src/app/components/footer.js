@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
   const footerRef = useRef(null);
-  const emailInputRef = useRef(null);
 
   useEffect(() => {
     // GSAP Animations
@@ -53,11 +52,6 @@ const Footer = () => {
     });
   }, []);
 
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    alert(`Subscribed with: ${emailInputRef.current.value}`);
-    emailInputRef.current.value = "";
-  };
 
   return (
     <footer
@@ -66,27 +60,7 @@ const Footer = () => {
       className=" text-white py-12 px-4 md:px-8 lg:px-16 bg-cover"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Email Subscription Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">
-            Subscribe for Daily Updates
-          </h2>
-          <form onSubmit={handleSubscribe} className="flex justify-center">
-            <input
-              ref={emailInputRef}
-              type="email"
-              placeholder="Enter your email"
-              className="email-input bg-white text-gray-800 rounded-l-lg py-3 px-4 w-64 md:w-80 focus:outline-none"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-yellow-400 text-green-900 font-semibold py-3 px-2 md:px-4 rounded-r-lg hover:bg-yellow-500 transition-colors"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
+        
 
         {/* Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -119,6 +93,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="#gallary" className="text-gray-300 hover:text-yellow-400">
+                  Gallary
+                </a>
+              </li>
+              <li>
                 <a href="#contact-us" className="text-gray-300 hover:text-yellow-400">
                   Contact
                 </a>
@@ -132,15 +111,15 @@ const Footer = () => {
             <ul className="space-y-2 font-bold">
               <li className="flex items-center space-x-2">
                 <FaMapMarkerAlt className="text-yellow-400" />
-                <span className="text-gray-300">123 Farm Road, Green Valley</span>
+                <span className="text-gray-300">Naira Agro Farm, Bilgram Road Barbatapur Hardoi, Uttarpradesh</span>
               </li>
               <li className="flex items-center space-x-2">
                 <FaEnvelope className="text-yellow-400" />
-                <span className="text-gray-300">info@farmwebsite.com</span>
+                <span className="text-gray-300">info@nairaaagro.in</span>
               </li>
               <li className="flex items-center space-x-2">
                 <FaPhone className="text-yellow-400" />
-                <span className="text-gray-300">+1 234 567 890</span>
+                <span className="text-gray-300">+91 8265973335</span>
               </li>
               <li className="flex items-center space-x-2">
                 <FaClock className="text-yellow-400" />
@@ -172,7 +151,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="text-center mt-12 pt-8 border-t border-gray-700">
           <p className="text-gray-300">
-            &copy; {new Date().getFullYear()} Nyra Agro. All rights reserved. Made with ❤️ by Jay Sarkar & Parvati & Son&apos;s P&L Comapny.
+            &copy; {new Date().getFullYear()} Nyra Agro. All rights reserved. Made with ❤️ by Ankit, jay Sarkar & Parvati & Son&apos;s P&L Comapny.
           </p>
         </div>
       </div>

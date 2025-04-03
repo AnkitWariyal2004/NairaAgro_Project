@@ -79,13 +79,13 @@ export default function Navbar() {
           {/* Contact Info */}
           <div className="hidden md:flex gap-4">
             <p className="flex gap-2 items-center">
-              <FaMapMarkerAlt /> Dineshpur, 263160
+              <FaMapMarkerAlt /> Bilgram Road, UttarPardesh
             </p>
             <p className="flex gap-2 items-center">
-              <FaEnvelope /> info@email.com
+              <FaEnvelope /> info@nairaaagro.in
             </p>
             <p className="flex gap-2 items-center">
-              <FaPhone /> +91 9876556677
+              <FaPhone /> +91 826597335
             </p>
             <p className="flex gap-2 items-center">
               <FaClock /> Mon-Sat: 09.30 to 06.00
@@ -180,21 +180,19 @@ export default function Navbar() {
   {/* Push Contact Info to Bottom */}
   <div className="mt-auto p-6 border-t border-gray-600">
     <p className="flex gap-2 items-center text-sm">
-      <FaMapMarkerAlt /> Dineshpur, 263160
+      <FaMapMarkerAlt /> Bilgram Road, UttarPardesh
     </p>
     <p className="flex gap-2 items-center text-sm">
-      <FaEnvelope /> info@email.com
+      <FaEnvelope /> info@nairaaagro.in
     </p>
     <p className="flex gap-2 items-center text-sm">
-      <FaPhone /> +91 9876556677
+      <FaPhone /> +91 826597335
     </p>
     <p className="flex gap-2 items-center text-sm">
       <FaClock /> Mon-Sat: 09.30 to 06.00
     </p>
   </div>
 </div>
-
-
 
       {/* Push Content Below Navbar */}
       <div className="mt-[70px] md:mt-[80px]"></div>

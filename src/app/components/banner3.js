@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { faLeaf, faCow, faSeedling } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Banner3 = () => {
   const images = [
-    "/img/service/service-1-1.jpg",
-    "/img/service/service-1-2.jpg",
-    "/img/service/service-1-3.jpg",
-    "/img/service/service-1-5.jpg",
-    "/img/service/service-1-4.jpg",
+    "/img/service/1.jpeg",
+    "/img/service/2.jpeg",
+    "/Gallary/4.jpeg",
+    "/Gallary/5.jpeg",
+    "/Gallary/6.jpeg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,67 +17,81 @@ const Banner3 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3500); // Change image every 3 seconds
-
+    }, 3500);
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
     <div className="w-full bg-white py-10 px-5 md:px-16">
-      {/* Container */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
-        {/* Left Content */}
+        {/* Left Content - Enhanced with farm products */}
         <div className="flex-1 space-y-6">
           <h3 className="text-green-700 text-lg font-semibold uppercase">
             Welcome to Naira Agro
           </h3>
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-            Agriculture & Organic Product Farm
+            Organic Farming & Premium Dairy Products
           </h1>
 
-          {/* Feature List */}
+          {/* Updated Feature List with actual farm offerings */}
           <div className="space-y-4">
-            {/* List Item 1 */}
-            <div className="flex items-center space-x-3">
-              <Image
-                src="/img/icon/list-icon.png"
-                alt="List Icon"
-                width={24}
-                height={24}
-                className="w-6 h-6"
-              />
-              <span className="text-gray-700 text-base">
-                Before you can dive-in to creating an effective user experience
-              </span>
+            {/* Moringa Powder */}
+            <div className="flex items-start space-x-3">
+              <div className="bg-green-100 p-2 rounded-full">
+                <FontAwesomeIcon icon={faLeaf} className="text-green-600 w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800">Moringa Powder</h4>
+                <p className="text-gray-600 text-sm">
+                  Nutrient-rich superfood packed with vitamins and antioxidants
+                </p>
+              </div>
             </div>
 
-            {/* List Item 2 */}
-            <div className="flex items-center space-x-3">
-              <Image
-                src="/img/icon/list-icon.png"
-                alt="List Icon"
-                width={24}
-                height={24}
-                className="w-6 h-6"
-              />
-              <span className="text-gray-700 text-base">
-                Intuitive user experience for your users online
-              </span>
+            {/* Sahiwal Cows */}
+            <div className="flex items-start space-x-3">
+              <div className="bg-green-100 p-2 rounded-full">
+                <FontAwesomeIcon icon={faCow} className="text-green-600 w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800">Sahiwal Cows</h4>
+                <p className="text-gray-600 text-sm">
+                  High-yield dairy breed producing 2,000-2,500kg milk per lactation
+                </p>
+              </div>
             </div>
 
-            {/* List Item 3 */}
-            <div className="flex items-center space-x-3">
-              <Image
-                src="/img/icon/list-icon.png"
-                alt="List Icon"
-                width={24}
-                height={24}
-                className="w-6 h-6"
-              />
-              <span className="text-gray-700 text-base">
-                Videos within it, each element influences
-              </span>
+            {/* Organic Farming */}
+            <div className="flex items-start space-x-3">
+              <div className="bg-green-100 p-2 rounded-full">
+                <FontAwesomeIcon icon={faSeedling} className="text-green-600 w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800">Organic Farming</h4>
+                <p className="text-gray-600 text-sm">
+                  Chemical-free cultivation of pulses, dals, and fruit trees
+                </p>
+              </div>
             </div>
+          </div>
+
+          {/* Benefits Section */}
+          <div className="mt-6 p-6 bg-green-50 rounded-xl">
+            <h3 className="text-lg font-semibold text-green-700 mb-3">Why Choose Us?</h3>
+            <ul className="space-y-2">
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-600 rounded-full"></span>
+                <span>Direct from farm to your home</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-600 rounded-full"></span>
+                <span>100% organic and sustainable practices</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="w-2 h-2 bg-green-600 rounded-full"></span>
+                <span>Supporting local farming communities</span>
+              </li>
+            </ul>
           </div>
 
           {/* Image Carousel */}
@@ -84,7 +100,7 @@ const Banner3 = () => {
               <Image
                 key={index}
                 src={img}
-                alt={`Slide ${index + 1}`}
+                alt={`Farm product ${index + 1}`}
                 fill
                 className={`object-cover absolute transition-all duration-700 ease-in-out rounded-2xl
                   ${index === currentIndex ? "opacity-100 scale-100 z-10" : "opacity-0 scale-110 z-0"}`}
@@ -93,36 +109,53 @@ const Banner3 = () => {
           </div>
         </div>
 
-        {/* Right Content - Main Banner */}
-<div className="flex-1 relative w-full max-w-xl flex justify-center items-center">
-  {/* Main Image */}
-  <Image
-    src="/img/service/selling-img-1-1.png"
-    alt="Main Banner"
-    width={600}
-    height={600}
-    className="w-full h-auto relative z-10"
-  />
+        {/* Right Content - Enhanced with product highlights */}
+        <div className="flex-1 relative w-full max-w-xl flex justify-center items-center">
+          {/* Main Image */}
+          <Image
+            src="/img/service/selling-img-1-1.png"
+            alt="Organic Farm Products"
+            width={600}
+            height={600}
+            className="w-full h-auto relative z-10"
+          />
 
-  {/* Bottom Left Image - Overlapping */}
-  <Image
-    src="/img/service/selling-img-1-2.png"
-    alt="Bottom Left Overlap"
-    width={180}
-    height={180}
-    className="absolute bottom-[45px] left-[-20px] z-20"
-  />
+          {/* Product Badges */}
+          <div className="absolute top-0 left-0 bg-white p-3 rounded-lg shadow-md z-20">
+            <div className="text-center">
+              <div className="text-green-600 font-bold text-xl">100%</div>
+              <div className="text-xs text-gray-600">Organic</div>
+            </div>
+          </div>
 
-  {/* Bottom Right Image - Overlapping */}
-  <Image
-    src="/img/shep/product-shep-2.png"
-    alt="Bottom Right Overlap"
-    width={180}
-    height={150}
-    className="absolute bottom-[180px] right-[-20px] z-20 animate-pulse"
-  />
-</div>
+          {/* Bottom Left Image - Moringa Powder */}
+          <div className="absolute bottom-[45px] left-[-20px] z-20 bg-white p-3 rounded-full shadow-lg">
+            <Image
+              src="/img/service/selling-img-1-2.png"
+              alt="Moringa Powder"
+              width={120}
+              height={120}
+              className="w-20 h-20 object-contain"
+            />
+            <div className="absolute -bottom-2 -right-2 bg-green-600 text-white text-xs px-2 py-1 rounded-full">
+              Superfood
+            </div>
+          </div>
 
+          {/* Bottom Right Image - Dairy Products */}
+          <div className="absolute bottom-[180px] right-[-20px] z-20 bg-white p-3 rounded-full shadow-lg animate-pulse">
+            <Image
+              src="/img/shep/product-shep-2.png"
+              alt="Dairy Products"
+              width={120}
+              height={100}
+              className="w-20 h-16 object-contain"
+            />
+            <div className="absolute -bottom-2 -right-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full">
+              A2 Milk
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

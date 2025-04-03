@@ -1,27 +1,78 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import Image from "next/image";
 
 const accordionData = [
   {
-    title: "Hydroponics Farming",
-    content:
-      "Hydroponics is a modern, soil-less farming technique that allows plants to grow in nutrient-rich water solutions. This innovative method uses up to 90% less water than traditional farming, making it highly sustainable and eco-friendly.",
+    title: "Moringa Powder",
+    content: (
+      <>
+        <p className="mb-4">Nutritional supplement made from dried Moringa oleifera leaves, packed with essential vitamins and minerals.</p>
+        <h3 className="font-semibold text-green-700 mb-2">Benefits:</h3>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li>Rich in antioxidants that protect against cell damage</li>
+          <li>High in plant-based protein (great for vegetarians)</li>
+          <li>Contains vitamins A, C, E and minerals like calcium & iron</li>
+          <li>Reduces inflammation and supports digestive health</li>
+          <li>Boosts energy levels and endurance</li>
+        </ul>
+        <h3 className="font-semibold text-green-700 mb-2">Uses:</h3>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Add to smoothies and juices</li>
+          <li>Make nutritious tea</li>
+          <li>Use in soups, stews and curries</li>
+          <li>Incorporate into baked goods</li>
+          <li>Take as capsules or supplements</li>
+        </ul>
+      </>
+    ),
   },
   {
-    title: "Vertical Farming",
-    content:
-      "Vertical farming is an innovative agricultural method where crops are grown in stacked layers, often within controlled indoor environments. This space-efficient technique maximizes food production while minimizing land use, making it ideal for urban areas.",
+    title: "Sahiwal Cows",
+    content: (
+      <>
+        <p className="mb-4">Premium dairy breed originating from Punjab, Pakistan, known for high milk production and heat tolerance.</p>
+        <h3 className="font-semibold text-green-700 mb-2">Characteristics:</h3>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li>Exceptional heat tolerance (ideal for tropical regions)</li>
+          <li>Produces 2,000-2,500 kg milk per lactation</li>
+          <li>Strong disease resistance and good fertility</li>
+          <li>Long lactation period and excellent mothering ability</li>
+          <li>Adaptable to various management systems</li>
+        </ul>
+      </>
+    ),
   },
   {
-    title: "Organic Farming",
-    content:
-      "Organic farming is a sustainable agricultural practice that avoids synthetic fertilizers, pesticides, and genetically modified organisms (GMOs), focusing instead on natural methods to maintain soil fertility and crop health. By using compost, crop rotation, and biological pest control, this approach enhances biodiversity, conserves water, and improves soil quality",
+    title: "Gir Cows",
+    content: (
+      <>
+        <p className="mb-4">Premium Indian dairy breed from Gujarat, renowned for its high milk yield and distinctive appearance.</p>
+        <h3 className="font-semibold text-green-700 mb-2">Characteristics:</h3>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li>Excellent heat tolerance for tropical regions</li>
+          <li>Produces 2,200-2,800 kg milk per lactation</li>
+          <li>Strong immune system and disease resistance</li>
+          <li>Good fertility rates and mothering ability</li>
+          <li>Adaptable to different environments</li>
+        </ul>
+      </>
+    ),
   },
   {
-    title: "Food Farming",
-    content:
-      "Food farming is the backbone of human civilization, providing nutritious crops and livestock to sustain global populations. It encompasses various methods, including traditional, organic, hydroponic, and vertical farming, to ensure efficient and sustainable food production.",
+    title: "Our Organic Products",
+    content: (
+      <>
+        <p className="mb-4">At Naira Agro Farm, we offer a range of pure organic products:</p>
+        <ul className="list-disc pl-5 space-y-2">
+          <li><strong>Moringa Powder:</strong> Rich in antioxidants and nutrients, perfect for health enthusiasts</li>
+          <li><strong>Sahiwal and Gir Cows:</strong> Indigenous breeds known for high-quality milk</li>
+          <li><strong>Fruit Trees:</strong> Banana, Mango, and Guava trees nurtured using organic practices</li>
+          <li><strong>Pulses and Dals:</strong> Chakki-fresh products sourced from local farmers</li>
+        </ul>
+      </>
+    ),
   },
 ];
 
@@ -36,28 +87,31 @@ export default function Banner1() {
     <div className="bg-gray-50 py-12">
       {/* Welcome Section */}
       <div className="text-center mb-12">
-        <img
+        <Image
           src="/img/icon/counter-icon-2-4.png"
           alt="Organic Farm Icon"
+          width={64}
+          height={64}
           className="mx-auto w-16 h-16 mb-4"
         />
         <p className="text-lg text-green-600 font-semibold mb-2">
-          WELCOME TO ORGANIC FARM
+          WELCOME TO NAIRA AGRO FARM
         </p>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold space-x-8 text-gray-800 max-w-7xl mx-auto">
-          <span>Welcome to Naira Agro Farm </span>
-          <br></br>
-          <span className="text-green-700">Your Gateway to Pure Organic Products</span>
+          <span>Your Gateway to Pure Organic Products</span>
         </h1>
       </div>
 
       {/* Content Section */}
       <div className="container mx-auto px-4">
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Side - Accordion */}
           <div className="w-full max-w-2xl mx-auto space-y-4">
-            <p className="text-lg text-gray-500">At Naira Agro Farm, we are passionate about providing pure organic products directly to our customers. Our mission is to promote sustainable farming practices, support local communities, and bring healthy living to your doorstep.</p>
+            <p className="text-lg text-gray-500">
+              At Naira Agro Farm, we are passionate about providing pure organic products directly to our customers. 
+              Our mission is to promote sustainable farming practices, support local communities, and bring healthy 
+              living to your doorstep. Join us in our journey towards a healthier and more sustainable future!
+            </p>
             {accordionData.map((item, index) => (
               <div key={index} className="border-b border-gray-300 pb-2">
                 {/* Accordion Header */}
@@ -101,9 +155,11 @@ export default function Banner1() {
 
           {/* Right Side - Image */}
           <div className="flex items-center justify-center">
-            <img
-              src="/img/about/about-1-1.jpg"
+            <Image
+              src="/Gallary/3.jpeg"
               alt="About Organic Farming"
+              width={500}
+              height={500}
               className="rounded-lg shadow-lg w-full max-w-md"
             />
           </div>

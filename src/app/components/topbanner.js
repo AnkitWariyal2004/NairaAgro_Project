@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Akaya_Kanadaka } from "next/font/google";
+import Link from "next/link";
 
 const akayaKanadaka = Akaya_Kanadaka({
   weight: "400",
@@ -51,7 +52,7 @@ export default function ShufflingBanner() {
   return (
     <section
       className="mt-24 h-[71vh] md:h-[40vh] lg:h-[55vh] bg-cover bg-center flex justify-center items-end relative"
-      style={{ backgroundImage: "url('/img/bg/counter-bg.jpg')" }}
+      style={{ backgroundImage: "url('/img/bg/4.jpeg')" }}
     >
       <div className="flex flex-col md:flex-row justify-between items-top w-full mt-24 md:pl-32 p-1">
         {/* Left Side - Text Content */}
@@ -63,12 +64,15 @@ export default function ShufflingBanner() {
           >
             {texts[currentText]}
           </h1>
-          <p className="text-emerald-500 text-base md:text-lg">
+          <p className="text-white text-base md:text-lg">
             Provide great welfare for animals, people, and the planet.
           </p>
-          <button className="text-lg md:text-xl text-white border-2 border-yellow-300 px-4 py-2 md:px-6 md:py-3 rounded-full transition-all duration-300 ease-in-out hover:bg-yellow-300 hover:text-black">
+          <div>
+          <Link href="#contact-us" className="text-lg md:text-xl text-white border-2 border-yellow-300 px-4 py-2 md:px-6 md:py-3 rounded-full transition-all duration-300 ease-in-out hover:bg-yellow-300 hover:text-black mt-2" >
             Contact Us
-          </button>
+          </Link>
+          </div>
+          
         </div>
 
         {/* Right Side - Animated Image (Fixed Flickering) */}

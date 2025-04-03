@@ -10,6 +10,11 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^5.2.5",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@next/font": "^14.2.15",
     "@tabler/icons-react": "^3.31.0",
     "clsx": "^2.1.1",

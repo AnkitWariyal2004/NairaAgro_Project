@@ -47,9 +47,9 @@ export default function Categories() {
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mt-2">
             Browse Our Categories
           </h1>
-          <p className="underline font-semibold text-gray-600 hover:text-green-700 cursor-pointer mt-4 md:mt-0">
+          {/* <p className="underline font-semibold text-gray-600 hover:text-green-700 cursor-pointer mt-4 md:mt-0">
             View All Categories &gt;&gt;
-          </p>
+          </p> */}
         </div>
       </div>
 
