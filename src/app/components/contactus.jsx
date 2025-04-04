@@ -32,7 +32,7 @@ const ContactUs = () => {
   };
 
   // Replace with your actual Google Maps embed URL
-  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.263258928344!2d72.8537203153846!3d19.05598725872694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8afbfffffff%3A0x1ad797cbfc78b0a5!2sYour%20Business%20Name!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin";
+  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.263258928344!2d72.8537203153846!3d19.05598725872694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8afbfffffff%3A0x1ad797cbfc78b0a5!2sYour%20Business%20Name!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-[url('/img/bg/hero-bg-1-2.jpg')] bg-no-repeat bg-cover bg-center p-4 sm:p-6 md:p-8 lg:p-12">

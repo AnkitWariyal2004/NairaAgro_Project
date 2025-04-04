@@ -10,6 +10,18 @@ const items = [
   { img: "/Gallary/IMG20250315074057.jpg", alt: "Cattle grazing" },
   { img: "/img/process/1.jpeg", alt: "Farm processing" },
   { img: "/Gallary/2.jpeg", alt: "Farm team working" },
+  { "img": "/CSI/2.jpeg", "alt": "Farm team working" },
+  { "img": "/CSI/3.jpeg", "alt": "Farm team working" },
+  { "img": "/CSI/4.jpeg", "alt": "Farm team working" },
+  { "img": "/CSI/5.jpeg", "alt": "Farm team working" },
+  { "img": "/CSI/6.jpeg", "alt": "Farm team working" },
+  { "img": "/CSI/7.jpeg", "alt": "Farm team working" },
+  { "img": "/CSI/8.jpeg", "alt": "Farm team working" },
+  { "img": "/CSI/9.jpeg", "alt": "Farm team working" },
+  { "img": "/CSI/10.jpeg", "alt": "Farm team working" },
+  { "img": "/CSI/11.jpeg", "alt": "Farm team working" },
+  { "img": "/CSI/12.jpeg", "alt": "Farm team working" },
+  { "img": "/CSI/13.jpeg", "alt": "Farm team working" },
 ];
 
 const breakpointColumnsObj = {

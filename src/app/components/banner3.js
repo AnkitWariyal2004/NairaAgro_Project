@@ -113,7 +113,7 @@ const Banner3 = () => {
         <div className="flex-1 relative w-full max-w-xl flex justify-center items-center">
           {/* Main Image */}
           <Image
-            src="/img/service/selling-img-1-1.png"
+            src="/CSI/1.jpeg"
             alt="Organic Farm Products"
             width={600}
             height={600}
@@ -129,7 +129,7 @@ const Banner3 = () => {
           </div>
 
           {/* Bottom Left Image - Moringa Powder */}
-          <div className="absolute bottom-[45px] left-[-20px] z-20 bg-white p-3 rounded-full shadow-lg">
+          <div className="absolute bottom-[-30px] right-[-20px] z-20 bg-white p-3 rounded-full shadow-lg">
             <Image
               src="/img/service/selling-img-1-2.png"
               alt="Moringa Powder"
@@ -143,7 +143,7 @@ const Banner3 = () => {
           </div>
 
           {/* Bottom Right Image - Dairy Products */}
-          <div className="absolute bottom-[180px] right-[-20px] z-20 bg-white p-3 rounded-full shadow-lg animate-pulse">
+          {/* <div className="absolute bottom-[180px] right-[-20px] z-20 bg-white p-3 rounded-full shadow-lg animate-pulse">
             <Image
               src="/img/shep/product-shep-2.png"
               alt="Dairy Products"
@@ -154,7 +154,7 @@ const Banner3 = () => {
             <div className="absolute -bottom-2 -right-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full">
               A2 Milk
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
