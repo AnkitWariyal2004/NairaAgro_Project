@@ -55,7 +55,7 @@ export default function Banner1() {
       {/* Welcome Section (unchanged) */}
       <div className="text-center mb-12">
         <Image
-          src="/img/icon/counter-icon-2-4.png"
+          src="/NCSIG/counter-icon-2-4.png"
           alt="Organic Farm Icon"
           width={64}
           height={64}
