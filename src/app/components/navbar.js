@@ -7,8 +7,15 @@ import Image from "next/image";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+<<<<<<< HEAD
   return(<nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
       <div className="container mx-auto px-6 py-2 flex justify-between items-center">
+=======
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div className="container mx-auto px-6 py-2 flex justify-between items-center">
+
+>>>>>>> cb20a0ef674aa3c4089c4dc5a9722ff1f8788d70
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image src="/CSI/naira-logo.png" alt="Logo" width={180} height={60} layout="intrinsic" />
@@ -39,8 +46,9 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <Link href="#" className="block px-6 py-3 text-gray-700 hover:bg-gray-100">Home</Link>
-          <Link href="#aboutus" className="block px-6 py-3 text-gray-700 hover:bg-gray-100">About Us</Link>
-          <Link href="#products" className="block px-6 py-3 text-gray-700 hover:bg-gray-100">Services</Link>
+          <Link href="#about-us" className="block px-6 py-3 text-gray-700 hover:bg-gray-100">About Us</Link>
+          <Link href="#services" className="block px-6 py-3 text-gray-700 hover:bg-gray-100">Services</Link>
+          <Link href="#gallary" className="block px-6 py-3 text-gray-700 hover:bg-gray-100">Gallary</Link>
           {/* <Link href="#" className="block px-6 py-3 text-gray-700 hover:bg-gray-100">Pricing</Link> */}
           <Link href="#contact-us" className="block px-6 py-3 text-white bg-green-600 hover:bg-green-700">Contact Us</Link>
         </div>

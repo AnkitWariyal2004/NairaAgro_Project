@@ -21,11 +21,22 @@ const texts = [
   "Green Revolution",
 ];
 
+// Array of background images
+const backgroundImages = [
+  "/img/bg/4.jpeg",
+  "/img/bg/1.jpeg",
+  "/img/bg/2.jpeg",
+  "/img/bg/3.jpeg",
+  // Add more images as needed
+];
+
 export default function HeroSection() {
   const [currentText, setCurrentText] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
   const [fade, setFade] = useState(true);
   const textRef = useRef(null);
   const contentRef = useRef(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
     // GSAP animations on mount
@@ -36,6 +47,7 @@ export default function HeroSection() {
       ease: "power3.out"
     });
 
+    // Text animation interval
     const textInterval = setInterval(() => {
       setFade(false);
       setTimeout(() => {
@@ -44,24 +56,47 @@ export default function HeroSection() {
       }, 500);
     }, 3000);
 
+
+    const imageInterval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % backgroundImages.length);
+    }, 2000);
+
     return () => {
       clearInterval(textInterval);
+      clearInterval(imageInterval);
     };
+  }, []);
+
+  useEffect(() => {
+    backgroundImages.forEach((src) => {
+      const img = new window.Image(); 
+      img.src = src;
+    });
   }, []);
 
   return (
     <section className="relative w-full h-[500px] md:h-[600px] flex items-center overflow-hidden bg-gray-900">
-      {/* Background Image with overlay */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/img/bg/4.jpeg"
-          alt="Farm Background"
-          fill
-          priority
-          quality={100}
-          className="object-cover" //fill
-        />
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
+      {/* Background Image with overlay - now with sliding effect */}
+      <div className="absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out">
+        {backgroundImages.map((src, index) => (
+          <div
+            key={src}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentImage ? "opacity-100" : "opacity-0"
+            }`}
+            ref={index === currentImage ? imageRef : null}
+          >
+            <Image
+              src={src}
+              alt="Farm Background"
+              fill
+              priority={index === 0}
+              quality={100}
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
+          </div>
+        ))}
       </div>
 
       {/* Content Container - Centered */}
@@ -71,7 +106,7 @@ export default function HeroSection() {
           ref={contentRef}
         >
           {/* Animated Text */}
-          <div className=" overflow-hidden h-[120px] md:h-[150px] flex items-center justify-center">
+          <div className="overflow-hidden h-[120px] md:h-[150px] flex items-center justify-center">
             <h1
               className={`${akayaKanadaka.className} text-4xl md:text-5xl lg:text-6xl font-bold text-white transition-all duration-1000 ${
                 fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
