@@ -17,7 +17,9 @@ const Navbar = () => {
           {/* <span className="text-xl text-teal-600 font-bold">Turbo Weightronics</span> */}
         </Link>
 
-        {/* Desktop Nav Links */}
+
+        {/* Desktop Nav Links */ }
+        {/* this is for desktop scren */}
         <div className="hidden md:flex space-x-6">
           <Link href="#" className="text-gray-700 hover:text-green-700">Home</Link>
           <Link href="#about-us" className="text-gray-700 hover:text-green-700">About Us</Link>
