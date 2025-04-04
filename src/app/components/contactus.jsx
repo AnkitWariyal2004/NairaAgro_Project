@@ -19,7 +19,7 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const phoneNumber = "+918077657958";
+    const phoneNumber = "+918265973335";
     const message = `Name: ${formData.name}%0AEmail: ${formData.email}%0AMessage: ${formData.message}`;
     
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
