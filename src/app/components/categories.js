@@ -70,7 +70,7 @@ export default function Categories() {
            <div className="absolute inset-0 bg-black bg-opacity-45 hover:backdrop-blur-sm flex flex-col justify-end p-4">
 
               <h2 className="text-white text-xl font-bold">{item.name}</h2>
-              <p className="text-white text-lg">{item.items} items</p>
+              <p className="text-white text-lg">{item.items} </p>
             </div>
           </motion.div>
         ))}
