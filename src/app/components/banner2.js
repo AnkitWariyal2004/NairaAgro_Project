@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaPlus, FaMinus, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Image from "next/image";
 
-// ... (keep your existing accordionData and sliderImages arrays)
-
 export default function Banner1() {
   const [openIndex, setOpenIndex] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [sliderHeight, setSliderHeight] = useState(0);
+  const accordionContainerRef = useRef(null);
+  const [fixedHeight, setFixedHeight] = useState(500); // Default height
 
   // Auto-advance slides every 5 seconds
   useEffect(() => {
@@ -20,19 +19,14 @@ export default function Banner1() {
     return () => clearInterval(timer);
   }, []);
 
-  // Match slider height to accordion content
+  // Set fixed height based on initial accordion height
   useEffect(() => {
-    const updateHeight = () => {
-      const accordion = document.querySelector('.accordion-container');
-      if (accordion) {
-        setSliderHeight(accordion.offsetHeight);
-      }
-    };
-    
-    updateHeight();
-    window.addEventListener('resize', updateHeight);
-    return () => window.removeEventListener('resize', updateHeight);
-  }, [openIndex]);
+    if (accordionContainerRef.current) {
+      // Get the height when all accordions are closed
+      const closedHeight = accordionContainerRef.current.offsetHeight;
+      setFixedHeight(closedHeight);
+    }
+  }, []);
 
   const toggleAccordion = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -52,7 +46,7 @@ export default function Banner1() {
 
   return (
     <div className="bg-gray-50 py-12">
-      {/* Welcome Section (unchanged) */}
+      {/* Welcome Section */}
       <div className="text-center mb-12">
         <Image
           src="/NCSIG/counter-icon-2-4.png"
@@ -73,7 +67,10 @@ export default function Banner1() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Side - Accordion */}
-          <div className="w-full max-w-2xl mx-auto space-y-4 accordion-container">
+          <div 
+            className="w-full max-w-2xl mx-auto space-y-4" 
+            ref={accordionContainerRef}
+          >
             <p className="text-lg text-gray-500">
               At Naira Agro Farm, we are passionate about providing pure organic products directly to our customers. 
               Our mission is to promote sustainable farming practices, support local communities, and bring healthy 
@@ -108,11 +105,11 @@ export default function Banner1() {
             ))}
           </div>
 
-          {/* Right Side - Full Height Slider */}
-          <div className="relative w-full h-full">
+          {/* Right Side - Fixed Height Slider */}
+          <div className="relative w-full">
             <div 
               className="relative w-full rounded-lg overflow-hidden shadow-lg"
-              style={{ height: `${sliderHeight}px` }}
+              style={{ height: `${fixedHeight}px`, minHeight: '500px' }}
             >
               {/* Slide Images */}
               {sliderImages.map((image, index) => (
@@ -172,6 +169,8 @@ export default function Banner1() {
     </div>
   );
 }
+
+// ... (keep your existing sliderImages and accordionData arrays)
 const sliderImages = [
   {
     id: 1,
@@ -191,6 +190,11 @@ const sliderImages = [
   {
     id: 4,
     src: "/NCSIG/aboutsection_c/7.jpeg",
+    alt: "Farm Fresh Products"
+  },
+  {
+    id: 5,
+    src: "/NCSIG/aboutsection_c/8.jpg",
     alt: "Farm Fresh Products"
   }
 ];
@@ -259,8 +263,7 @@ const accordionData = [
       <>
         <p className="mb-4">At Naira Agro Farm, we offer a range of pure organic products:</p>
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Moringa Powder:</strong> Rich in antioxidants and nutrients, perfect for health enthusiasts</li>
-          <li><strong>Sahiwal and Gir Cows:</strong> Indigenous breeds known for high-quality milk</li>
+          <li><strong>Kadka Nath Chicken and Eggs:</strong> Protein-rich and immunity-boosting, raised naturally for premium nutrition</li>
           <li><strong>Fruit Trees:</strong> Banana, Mango, and Guava trees nurtured using organic practices</li>
           <li><strong>Pulses and Dals:</strong> Chakki-fresh products sourced from local farmers</li>
         </ul>
