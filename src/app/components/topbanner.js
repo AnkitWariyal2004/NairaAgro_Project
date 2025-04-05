@@ -14,6 +14,7 @@ const akayaKanadaka = Akaya_Kanadaka({
 });
 
 const texts = [
+  "Welcome To Naira Agro",
   "Grow Your Dreams",
   "Harvest The Future",
   "Organic & Fresh",
@@ -23,11 +24,9 @@ const texts = [
 
 // Array of background images
 const backgroundImages = [
-  "/img/bg/4.jpeg",
-  "/img/bg/1.jpeg",
-  "/img/bg/2.jpeg",
-  "/img/bg/3.jpeg",
-  // Add more images as needed
+  "/NCSIG/slider_h/1.jpg",
+  "/NCSIG/slider_h/2.jpeg",
+  "/NCSIG/slider_h/3.jpeg",
 ];
 
 export default function HeroSection() {
@@ -54,12 +53,12 @@ export default function HeroSection() {
         setCurrentText((prev) => (prev + 1) % texts.length);
         setFade(true);
       }, 500);
-    }, 3000);
+    }, 5000);
 
 
     const imageInterval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % backgroundImages.length);
-    }, 2000);
+    }, 5000);
 
     return () => {
       clearInterval(textInterval);
@@ -75,7 +74,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-[500px] md:h-[600px] flex items-center overflow-hidden bg-gray-900">
+    <section className="relative w-full h-[650px] md:h-[675px] flex items-center overflow-hidden bg-gray-900">
       {/* Background Image with overlay - now with sliding effect */}
       <div className="absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out">
         {backgroundImages.map((src, index) => (

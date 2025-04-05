@@ -2,43 +2,31 @@ import Image from "next/image";
 import { faLeaf, faCow, faSeedling } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// Image data for the collage
+// Image data for the collage - now with just 4 images
 const collageImages = [
   {
     id: 1,
-    src: "/CSI/1.jpeg",
+    src: "/NCSIG/organic_f_c/8.jpeg",
     alt: "Organic Farm Products",
     className: "col-span-2 row-span-2" // This will be the largest image
   },
   {
     id: 2,
-    src: "/CSI/2.jpeg",
+    src: "/NCSIG/organic_f_c/9.jpg",
     alt: "Moringa Powder",
     className: "col-span-1 row-span-1"
   },
   {
     id: 3,
-    src: "/CSI/3.jpeg",
+    src: "/NCSIG/organic_f_c/10.jpg",
     alt: "Sahiwal Cows",
     className: "col-span-1 row-span-1"
   },
   {
     id: 4,
-    src: "/CSI/4.jpeg", // Add your fourth image
+    src: "/NCSIG/organic_f_c/11.jpg",
     alt: "Farm Landscape",
-    className: "col-span-1 row-span-1"
-  },
-  {
-    id: 5,
-    src: "/CSI/5.jpeg", // Add your fifth image
-    alt: "Harvest Products",
-    className: "col-span-1 row-span-1"
-  },
-  {
-    id: 6,
-    src: "/CSI/5.jpeg", // Add your sixth image
-    alt: "Harvest Products",
-    className: "col-span-1 row-span-1"
+    className: "col-span-3 row-span-1" // This will span two columns at the bottom
   }
 ];
 

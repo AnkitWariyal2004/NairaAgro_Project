@@ -32,7 +32,7 @@ const ContactUs = () => {
   };
 
   // Replace with your actual Google Maps embed URL
-  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.263258928344!2d72.8537203153846!3d19.05598725872694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8afbfffffff%3A0x1ad797cbfc78b0a5!2sYour%20Business%20Name!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3248.027781393269!2d80.106489!3d27.36625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDIxJzU4LjUiTiA4MMKwMDYnMjMuNCJF!5e1!3m2!1sen!2sin!4v1743830635325!5m2!1sen!2sin"
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-[url('/img/bg/hero-bg-1-2.jpg')] bg-no-repeat bg-cover bg-center p-4 sm:p-6 md:p-8 lg:p-12">
@@ -150,7 +150,7 @@ const ContactUs = () => {
           
           <div className="mt-6 text-center">
             <a 
-              href="https://maps.google.com?q=Your+Business+Address" 
+              href="https://maps.app.goo.gl/G3coXbVhR9xmCcBC7" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-[#1b8e2d] py-2 px-6 rounded-full font-medium hover:bg-gray-100 transition"

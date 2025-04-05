@@ -175,22 +175,22 @@ export default function Banner1() {
 const sliderImages = [
   {
     id: 1,
-    src: "/Gallary/1.jpeg",
+    src: "/NCSIG/aboutsection_c/4.jpeg",
     alt: "Organic Farm Landscape"
   },
   {
     id: 2,
-    src: "/Gallary/2.jpeg",
+    src: "/NCSIG/aboutsection_c/5.jpeg",
     alt: "Moringa Powder Production"
   },
   {
     id: 3,
-    src: "/Gallary/3.jpeg",
+    src: "/NCSIG/aboutsection_c/6.jpg",
     alt: "Sahiwal Cows Grazing"
   },
   {
     id: 4,
-    src: "/Gallary/4.jpeg",
+    src: "/NCSIG/aboutsection_c/7.jpeg",
     alt: "Farm Fresh Products"
   }
 ];
