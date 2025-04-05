@@ -26,7 +26,7 @@ const texts = [
 const backgroundImages = [
   "/NCSIG/slider_h/1.jpg",
   "/NCSIG/slider_h/2.jpeg",
-  "/NCSIG/slider_h/3.jpeg",
+  "/NCSIG/slider_h/4.jpeg",
 ];
 
 export default function HeroSection() {
