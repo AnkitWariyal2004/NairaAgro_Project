@@ -263,7 +263,7 @@ const accordionData = [
       <>
         <p className="mb-4">At Naira Agro Farm, we offer a range of pure organic products:</p>
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Kadka Nath Chicken and Eggs:</strong> Protein-rich and immunity-boosting, raised naturally for premium nutrition</li>
+          <li><strong>Kadknath Chicken and Eggs:</strong> Protein-rich and immunity-boosting, raised naturally for premium nutrition</li>
           <li><strong>Fruit Trees:</strong> Banana, Mango, and Guava trees nurtured using organic practices</li>
           <li><strong>Pulses and Dals:</strong> Chakki-fresh products sourced from local farmers</li>
         </ul>
